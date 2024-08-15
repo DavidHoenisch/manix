@@ -11,10 +11,11 @@
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
+  security.pam.enableSudoTouchIdAuth = true;
+  users.users.dhoenisch.home = "/Users/dhoenisch";
   system.keyboard.enableKeyMapping = true;
-  system.keyboard.remapCapsLockToEscape = true;
-  fonts.fontDir.enable = true; # DANGER
-  fonts.fonts = [ (pkgs.nerdfonts.override { fonts = [ "Meslo" ]; }) ];
+  # system.keyboard.remapCapsLockToEscape = true;
+  fonts.packages = [ (pkgs.nerdfonts.override { fonts = [ "Meslo" ]; }) ];
   services.nix-daemon.enable = true;
   system.defaults = {
     finder.AppleShowAllExtensions = true;
@@ -30,9 +31,9 @@
     enable = true;
     caskArgs.no_quarantine = true;
     global.brewfile = true;
-    masApps = { };
-    casks = [ "raycast" "amethyst" ];
-    taps = [ "fujiapple852/trippy" ];
-    brews = [ "trippy" ];
+    masApps = {};
+    casks = [ "raycast" "amethyst" "brave-browser"];
+    taps = [];
+    brews = [];
   };
 }

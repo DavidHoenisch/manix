@@ -1,13 +1,67 @@
-{ pkgs, pwnvim, ... }: {
+{ pkgs, ... }: {
   # Don't change this when you change package input. Leave it alone.
-  home.stateVersion = "22.11";
+  home.stateVersion = "24.05";
   # specify my home-manager configs
   home.packages = with pkgs; [
-    ripgrep
-    fd
+    act
+    age
+    alacritty
+    amber-lang
+    atuin
+    bat
+    btop
+    cobra-cli
+    container-structure-test
     curl
+    devpod
+    docker
+    fd
+    ffmpeg
+    flyctl
+    fx
+    gh
+    go
+    go-task
+    gomarkdoc
+    gotools
+    grpcurl
+    hoard
+    jitsi-meet-electron
+    k9s
+    kind
+    kitty
+    ko
+    kompose
+    kubernetes-helm
     less
-    pwnvim.packages."aarch64-darwin".default
+    linode-cli
+    neovim
+    nodejs
+    ollama
+    pandoc
+    pet
+    podman
+    poetry
+    portal
+    pyenv
+    python3
+    python312Packages.pip
+    ripgrep
+    ripgrep
+    serpl
+    skaffold
+    skim
+    sops
+    syft
+    telegram-desktop
+    termshark
+    tmux
+    watchexec
+    xsv
+    yazi
+    yq
+    zoxide
+#    podman-desktop
   ];
   home.sessionVariables = {
     PAGER = "less";
@@ -26,7 +80,7 @@
   programs.zsh.enableSyntaxHighlighting = true;
   programs.zsh.shellAliases = {
     ls = "ls --color=auto -F";
-    nixswitch = "darwin-rebuild switch --flake ~/src/system-config/.#";
+    nixswitch = "darwin-rebuild switch --flake ~/src/manix/.#";
     nixup = "pushd ~/src/system-config; nix flake update; nixswitch; popd";
   };
   programs.starship.enable = true;
@@ -36,5 +90,5 @@
     settings.font.normal.family = "MesloLGS Nerd Font Mono";
     settings.font.size = 16;
   };
-  home.file.".inputrc".source = ./dotfiles/inputrc;
+  # home.file.".inputrc".source = ./dotfiles/inputrc;
 }
