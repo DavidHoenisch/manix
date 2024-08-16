@@ -73,7 +73,11 @@
   programs.fzf.enable = true;
   programs.fzf.enableZshIntegration = true;
   programs.exa.enable = true;
-  programs.git.enable = true;
+  programs.git ={
+	enable = true;
+	userEmail = "dh1689@pm.me";
+	userName = "DavidHoenisch";
+  };
   programs.zsh.enable = true;
   programs.zsh.enableCompletion = true;
   programs.zsh.enableAutosuggestions = true;
