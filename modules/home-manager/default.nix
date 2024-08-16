@@ -10,6 +10,7 @@
     atuin
     bat
     btop
+    chezmoi
     cobra-cli
     container-structure-test
     curl
@@ -32,6 +33,7 @@
     kitty
     ko
     kompose
+    kubectl
     kubernetes-helm
     less
     linode-cli
@@ -47,7 +49,7 @@
     python3
     python312Packages.pip
     ripgrep
-    ripgrep
+    rm-improved
     serpl
     skaffold
     skim
@@ -78,15 +80,6 @@
 	userEmail = "dh1689@pm.me";
 	userName = "DavidHoenisch";
   };
-  programs.zsh.enable = true;
-  programs.zsh.enableCompletion = true;
-  programs.zsh.enableAutosuggestions = true;
-  programs.zsh.enableSyntaxHighlighting = true;
-  programs.zsh.shellAliases = {
-    ls = "ls --color=auto -F";
-    nixswitch = "darwin-rebuild switch --flake ~/src/manix/.#";
-    nixup = "pushd ~/src/system-config; nix flake update; nixswitch; popd";
-  };
   programs.starship.enable = true;
   programs.starship.enableZshIntegration = true;
   programs.alacritty = {
@@ -94,5 +87,5 @@
     settings.font.normal.family = "MesloLGS Nerd Font Mono";
     settings.font.size = 16;
   };
-  # home.file.".inputrc".source = ./dotfiles/inputrc;
+  #home.file.".inputrc".source = ./dotfiles/inputrc;
 }
