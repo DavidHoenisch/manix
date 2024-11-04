@@ -7,11 +7,14 @@
     age
     alacritty
     amber-lang
+    atac
     atuin
     bat
     btop
+    caddy
     chezmoi
     cobra-cli
+    colima
     container-structure-test
     curl
     devpod
@@ -37,23 +40,28 @@
     kubernetes-helm
     less
     linode-cli
+    minikube
     neovim
     nodejs
+    nushell
     ollama
     pandoc
     pet
     podman
     poetry
     portal
+    protobuf_26
     pyenv
     python3
     python312Packages.pip
     ripgrep
     rm-improved
+    rustup
     serpl
     skaffold
     skim
     sops
+    supabase-cli
     syft
     telegram-desktop
     termshark
@@ -79,6 +87,7 @@
 	enable = true;
 	userEmail = "dh1689@pm.me";
 	userName = "DavidHoenisch";
+	
   };
   programs.starship.enable = true;
   programs.starship.enableZshIntegration = true;

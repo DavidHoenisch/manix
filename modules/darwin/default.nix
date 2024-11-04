@@ -32,7 +32,16 @@
     caskArgs.no_quarantine = true;
     global.brewfile = true;
     masApps = {};
-    casks = [ "raycast" "amethyst" "brave-browser"];
+    casks = [ 
+      "arc"
+      "brave-browser" 
+      "freecad"
+      "multipass" 
+      "nikitabobko/tap/aerospace" 
+      "podman-desktop" 
+      "raycast" 
+      "zettlr"
+    ];
     taps = [];
     brews = [];
   };
